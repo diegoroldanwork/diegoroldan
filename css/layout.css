@@ -2,6 +2,18 @@
    Secciones de la página
    ========================================================================== */
 
+/* Fondo ambiental: posición de las manchas por sección -------------------- */
+
+.ambient--hero span:nth-child(1) { --c: var(--blob-1); --size: 560px; top: -12%;  left: -14%; }
+.ambient--hero span:nth-child(2) { --c: var(--blob-2); --size: 620px; top: 0;     right: -10%; animation-delay: -20s; }
+.ambient--preview span:nth-child(1) { --c: var(--blob-3); --size: 600px; top: 20%;  left: 5%; animation-delay: -10s; }
+.ambient--preview span:nth-child(2) { --c: var(--blob-1); --size: 460px; bottom: -10%; right: 0; animation-delay: -32s; }
+
+@media (max-width: 880px) {
+  /* hero en una columna: la mancha azul baja detrás de developer.js */
+  .ambient--hero span:nth-child(2) { top: auto; bottom: 0; }
+}
+
 /* Hero -------------------------------------------------------------------- */
 
 .hero {

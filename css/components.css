@@ -2,6 +2,26 @@
    Componentes
    ========================================================================== */
 
+/* Vidrio ------------------------------------------------------------------
+   Superficie compartida por la ventana, el header y el selector de idioma.
+   ------------------------------------------------------------------------- */
+
+.window,
+.site-header,
+.lang-switch {
+  background: var(--glass-shine), var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .window,
+  .site-header,
+  .lang-switch { background: var(--glass-shine), var(--glass-fallback); }
+}
+
 /* Header ------------------------------------------------------------------ */
 
 .site-header {
@@ -9,10 +29,8 @@
   top: 0;
   z-index: 100;
   height: var(--header-h);
-  background: rgba(0, 0, 0, .8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+  border-width: 0 0 1px;
+  box-shadow: var(--glass-highlight);
 }
 
 .site-header .container {
@@ -58,8 +76,8 @@
 .lang-switch {
   display: inline-flex;
   padding: 3px;
-  border: 1px solid var(--line-strong);
   border-radius: 999px;
+  box-shadow: var(--glass-highlight);
 }
 
 .lang-switch button {
@@ -92,11 +110,8 @@
 .window {
   display: flex;
   flex-direction: column;
-  background: var(--surface);
-  border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, .9);
 }
 
 .window__bar {
@@ -106,8 +121,8 @@
   gap: 12px;
   height: 38px;
   padding-inline: 14px;
-  background: var(--surface-2);
-  border-bottom: 1px solid var(--line);
+  background: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border-soft);
   flex-shrink: 0;
 }
 
@@ -151,7 +166,7 @@
   transition: border-color var(--dur) var(--ease);
 }
 .window--link:hover,
-.window--link:focus-within { border-color: var(--line-strong); }
+.window--link:focus-within { border-color: rgba(255, 255, 255, .22); }
 
 /* Resaltado de sintaxis — escala de grises + acento */
 .tok-kw   { color: var(--muted); }
@@ -193,7 +208,7 @@
   border-color: var(--accent);
   color: var(--accent-ink);
 }
-.btn--primary:hover { background: #6febb0; border-color: #6febb0; }
+.btn--primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
 
 /* Chat (estructura base; la lógica llega en otra fase) ------------------- */
 
@@ -208,8 +223,8 @@
 }
 .chat__msg--bot {
   align-self: flex-start;
-  background: var(--surface-2);
-  border: 1px solid var(--line);
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border-soft);
   border-bottom-left-radius: 4px;
 }
 .chat__msg--user {
