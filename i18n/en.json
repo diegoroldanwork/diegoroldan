@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Diego Nicolás Roldán — Web Developer",
+    "description": "Portfolio of Diego Nicolás Roldán: web development, automation and artificial intelligence."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "nav": "Main navigation",
+    "lang": "Language"
+  },
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "// hi, I'm",
+    "title": "Diego Nicolás Roldán",
+    "lead": "Web developer. I build fast websites and AI-powered automations that solve real problems.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Contact"
+  },
+  "code": {
+    "role": "Web developer",
+    "focus1": "Web development",
+    "focus2": "Automation",
+    "focus3": "AI agents",
+    "status": "open to projects"
+  },
+  "preview": {
+    "eyebrow": "// phase 1",
+    "title": "Window component",
+    "lead": "The three variants used across the site: code, chat and project card.",
+    "chatBot": "Hi! How can I help you?",
+    "chatUser": "I'd like to see your projects.",
+    "projectTitle": "Sample project",
+    "projectDesc": "Short project description. It will be loaded from data/projects.json."
+  },
+  "footer": {
+    "rights": "Handmade, no frameworks."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Diego Nicolás Roldán — Desarrollador web",
+    "description": "Portfolio de Diego Nicolás Roldán: desarrollo web, automatización e inteligencia artificial."
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "nav": "Navegación principal",
+    "lang": "Idioma"
+  },
+  "nav": {
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "eyebrow": "// hola, soy",
+    "title": "Diego Nicolás Roldán",
+    "lead": "Desarrollador web. Construyo sitios rápidos y automatizaciones con IA que resuelven problemas reales.",
+    "ctaProjects": "Ver proyectos",
+    "ctaContact": "Contacto"
+  },
+  "code": {
+    "role": "Desarrollador web",
+    "focus1": "Desarrollo web",
+    "focus2": "Automatización",
+    "focus3": "Agentes IA",
+    "status": "disponible para proyectos"
+  },
+  "preview": {
+    "eyebrow": "// fase 1",
+    "title": "Componente ventana",
+    "lead": "Las tres variantes que se usarán en el sitio: código, chat y tarjeta de proyecto.",
+    "chatBot": "¡Hola! ¿En qué te puedo ayudar?",
+    "chatUser": "Quiero ver tus proyectos.",
+    "projectTitle": "Proyecto de ejemplo",
+    "projectDesc": "Descripción breve del proyecto. Se cargará desde data/projects.json."
+  },
+  "footer": {
+    "rights": "Hecho a mano, sin frameworks."
+  }
+}
