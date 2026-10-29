@@ -58,7 +58,7 @@
 
 .site-footer {
   padding-block: 32px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--glass-border-soft);
   font: 400 13px/1.5 var(--font-mono);
-  color: var(--dim);
+  color: var(--muted);
 }

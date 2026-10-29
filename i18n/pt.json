@@ -15,7 +15,7 @@
   },
   "hero": {
     "eyebrow": "// olá, eu sou",
-    "title": "Diego Nicolás Roldán",
+    "title": "Diego Nicolás *Roldán*",
     "lead": "Desenvolvedor web. Crio sites rápidos e automações com IA que resolvem problemas reais.",
     "ctaProjects": "Ver projetos",
     "ctaContact": "Contato"
@@ -29,9 +29,9 @@
   },
   "preview": {
     "eyebrow": "// fase 1",
-    "title": "Componente janela",
+    "title": "Componente *janela*",
     "lead": "As três variantes que serão usadas no site: código, chat e card de projeto.",
-    "chatBot": "Olá! Como posso ajudar?",
+    "chatBot": "Oi! Sou a Claudia, assistente do Diego. Toque numa pergunta rápida ou escreva a sua.",
     "chatUser": "Quero ver seus projetos.",
     "projectTitle": "Projeto de exemplo",
     "projectDesc": "Breve descrição do projeto. Será carregada de data/projects.json."

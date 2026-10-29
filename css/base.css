@@ -3,30 +3,27 @@
    ========================================================================== */
 
 :root {
-  /* Color */
-  --bg: #000;
-  --surface: #0b0b0b;
-  --surface-2: #121212;
-  --line: #222;
-  --line-strong: #333;
-  --text: #ededed;
-  --muted: #9a9a9a;
-  --dim: #666;
-  --accent: #4de39b;            /* único color de acento */
-  --accent-ink: #00170c;        /* texto sobre fondo de acento */
-  --accent-hover: #6febb0;
+  /* Color — paleta Noctua */
+  --bg: #0a0f0c;
+  --surface: #121a15;
+  --text: #e8efe9;
+  --muted: #9aaba0;
+  /* Lima: sólo botones primarios, estados activos y una palabra clave por título */
+  --accent: #c8f135;
+  --on-accent: #0a0f0c;
+  --accent-hover: #d6f55e;
 
-  /* Manchas de fondo (provisorias hasta definir la paleta) */
-  --blob-1: #4de39b;
-  --blob-2: #3b82f6;
-  --blob-3: #8b5cf6;
-  --blob-opacity: .22;
+  /* Manchas de fondo */
+  --blob-1: #c8f135;
+  --blob-2: #3ddc84;
+  --blob-3: #0e7490;
+  --blob-opacity: .18;
   --blob-blur: clamp(50px, 8vw, 90px);
 
   /* Vidrio */
-  --glass-bg: rgba(255, 255, 255, .035);
+  --glass-bg: rgba(18, 26, 21, .35);               /* --surface translúcido: apaga las manchas detrás del texto (AA) */
   --glass-bg-strong: rgba(255, 255, 255, .06);    /* barras y elementos chicos */
-  --glass-fallback: #101012;                       /* sin backdrop-filter */
+  --glass-fallback: var(--surface);                /* sin backdrop-filter */
   --glass-border: rgba(255, 255, 255, .12);
   --glass-border-soft: rgba(255, 255, 255, .07);   /* separadores internos */
   --glass-blur: blur(24px) saturate(160%);
@@ -76,7 +73,7 @@ button { font: inherit; color: inherit; }
 h1, h2, h3, p { margin: 0; }
 code, pre { font-family: var(--font-mono); }
 
-::selection { background: var(--accent); color: var(--accent-ink); }
+::selection { background: var(--accent); color: var(--on-accent); }
 
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -130,7 +127,7 @@ code, pre { font-family: var(--font-mono); }
 
 .eyebrow {
   font: 500 13px/1 var(--font-mono);
-  color: var(--accent);
+  color: var(--muted);
   letter-spacing: .02em;
 }
 
@@ -155,7 +152,7 @@ code, pre { font-family: var(--font-mono); }
 }
 
 .muted { color: var(--muted); }
-.accent { color: var(--accent); }
+.kw { color: var(--accent); font-style: normal; }   /* palabra clave del título: *así* en i18n */
 
 /* Utilidades -------------------------------------------------------------- */
 
@@ -173,7 +170,7 @@ code, pre { font-family: var(--font-mono); }
   z-index: 1000;
   padding: 8px 14px;
   background: var(--accent);
-  color: var(--accent-ink);
+  color: var(--on-accent);
   border-radius: var(--radius-sm);
   font-weight: 600;
   transform: translateY(-200%);

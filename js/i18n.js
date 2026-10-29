@@ -2,7 +2,7 @@
    i18n: carga i18n/<lang>.json y traduce el DOM.
 
    Marcado:
-     data-i18n="hero.title"                       → textContent
+     data-i18n="hero.title"                       → texto (*palabra* → <em class="kw">)
      data-i18n-attr="aria-label:nav.label;title:x" → atributos
 
    Otros módulos pueden usar t(key) y escuchar el evento "i18n:change".
@@ -38,10 +38,26 @@ async function load(lang) {
   return cache.get(lang);
 }
 
+// "Componente *ventana*" → Componente <em class="kw">ventana</em> (sin innerHTML)
+function setText(el, value) {
+  const parts = value.split(/\*([^*]+)\*/);
+  if (parts.length === 1) {
+    el.textContent = value;
+    return;
+  }
+  el.replaceChildren(...parts.map((part, i) => {
+    if (i % 2 === 0) return document.createTextNode(part);
+    const em = document.createElement('em');
+    em.className = 'kw';
+    em.textContent = part;
+    return em;
+  }));
+}
+
 export function translate(root = document) {
   root.querySelectorAll('[data-i18n]').forEach((el) => {
     const value = lookup(dict, el.dataset.i18n);
-    if (typeof value === 'string') el.textContent = value;
+    if (typeof value === 'string') setText(el, value);
   });
 
   root.querySelectorAll('[data-i18n-attr]').forEach((el) => {
