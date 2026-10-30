@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#0a0f0c">
-  <title data-i18n="meta.title">Diego Nicolás Roldán — Desarrollador web</title>
+  <title data-i18n="meta.title">Diego Nicolás Roldán — Desarrollador full stack</title>
   <meta name="description" data-i18n-attr="content:meta.description" content="Portfolio de Diego Nicolás Roldán: desarrollo web, automatización e inteligencia artificial.">
-  <meta property="og:title" content="Diego Nicolás Roldán — Desarrollador web">
+  <meta property="og:title" content="Diego Nicolás Roldán — Desarrollador full stack">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -25,8 +25,9 @@
 
       <nav class="nav" data-i18n-attr="aria-label:a11y.nav" aria-label="Navegación principal">
         <ul class="nav__links">
-          <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
-          <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+          <li><a href="#chat" data-ask="about" data-i18n="nav.about">Sobre mí</a></li>
+          <li><a href="#chat" data-ask="projects" data-i18n="nav.projects">Proyectos</a></li>
+          <li><a href="#chat" data-ask="stack" data-i18n="nav.stack">Stack</a></li>
           <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
         </ul>
 
@@ -40,20 +41,54 @@
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="section">
-      <div class="ambient ambient--hero" aria-hidden="true"><span></span><span></span></div>
-      <div class="container hero">
-        <div class="hero__text">
-          <p class="eyebrow" data-i18n="hero.eyebrow">// hola, soy</p>
-          <h1 class="title-xl" data-i18n="hero.title">Diego Nicolás <em class="kw">Roldán</em></h1>
-          <p class="lead" data-i18n="hero.lead">Desarrollador web. Construyo sitios rápidos y automatizaciones con IA que resuelven problemas reales.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#proyectos" data-i18n="hero.ctaProjects">Ver proyectos</a>
-            <a class="btn" href="#contacto" data-i18n="hero.ctaContact">Contacto</a>
+    <!-- Hero: presentación + chat con Claudia -->
+    <section class="section hero">
+      <div class="ambient ambient--hero" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="container hero__inner">
+        <div class="intro">
+          <div class="avatar">
+            <img src="img/avatar.jpg" width="112" height="112" alt="Foto de Diego Nicolás Roldán" data-i18n-attr="alt:a11y.photo">
+            <span class="avatar__status" aria-hidden="true"></span>
           </div>
+          <p class="kicker" data-i18n="hero.kicker">Full stack · Automatización · IA</p>
+          <h1 class="title-xl" data-i18n="hero.title">Hola, soy Diego. <em class="kw">Preguntame</em> lo que quieras.</h1>
         </div>
 
+        <div class="window chat" id="chat">
+          <div class="window__bar">
+            <span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="window__title">claudia.chat</span>
+          </div>
+
+          <div class="chat__log" role="log" aria-live="polite" tabindex="0" data-i18n-attr="aria-label:a11y.chatLog" aria-label="Conversación con Claudia">
+            <div class="chat__msg chat__msg--bot"><p data-i18n="chat.greeting">¡Hola! Soy Claudia, la asistente de Diego. Tocá una pregunta rápida o escribí la tuya.</p></div>
+          </div>
+
+          <div class="chat__chips" role="group" data-i18n-attr="aria-label:a11y.chips" aria-label="Preguntas rápidas">
+            <button type="button" class="chip" data-ask="about" aria-pressed="false" data-i18n="chat.chips.about">Sobre mí</button>
+            <button type="button" class="chip" data-ask="projects" aria-pressed="false" data-i18n="chat.chips.projects">Proyectos</button>
+            <button type="button" class="chip" data-ask="stack" aria-pressed="false" data-i18n="chat.chips.stack">Stack</button>
+            <button type="button" class="chip" data-ask="certs" aria-pressed="false" data-i18n="chat.chips.certs">Certificaciones</button>
+            <button type="button" class="chip" data-ask="contact" aria-pressed="false" data-i18n="chat.chips.contact">Contacto</button>
+          </div>
+
+          <form class="chat__form">
+            <label class="sr-only" for="chat-input" data-i18n="a11y.input">Escribí tu pregunta</label>
+            <input class="chat__input" id="chat-input" type="text" maxlength="300" autocomplete="off" placeholder="¿Qué proyectos hiciste con IA?" data-i18n-attr="placeholder:chat.placeholder">
+            <button class="chat__send" type="submit" data-i18n-attr="aria-label:a11y.send" aria-label="Enviar">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <p class="chat__note" data-i18n="chat.note">Las preguntas rápidas tienen respuestas fijas · texto libre con IA: próximamente</p>
+      </div>
+    </section>
+
+    <!-- developer.js -->
+    <section class="section section--tight">
+      <div class="container narrow">
         <div class="window window--code">
           <div class="window__bar">
             <span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -62,64 +97,43 @@
           <div class="window__body">
 <pre><code><span class="tok-kw">const</span> <span class="tok-var">developer</span> <span class="tok-punc">=</span> <span class="tok-punc">{</span>
   <span class="tok-key">name</span><span class="tok-punc">:</span> <span class="tok-str">"Diego Nicolás Roldán"</span><span class="tok-punc">,</span>
-  <span class="tok-key">role</span><span class="tok-punc">:</span> <span class="tok-str">"<span data-i18n="code.role">Desarrollador web</span>"</span><span class="tok-punc">,</span>
+  <span class="tok-key">role</span><span class="tok-punc">:</span> <span class="tok-str">"<span data-i18n="code.role">Desarrollador full stack jr.</span>"</span><span class="tok-punc">,</span>
   <span class="tok-key">focus</span><span class="tok-punc">: [</span>
     <span class="tok-str">"<span data-i18n="code.focus1">Desarrollo web</span>"</span><span class="tok-punc">,</span>
     <span class="tok-str">"<span data-i18n="code.focus2">Automatización</span>"</span><span class="tok-punc">,</span>
     <span class="tok-str">"<span data-i18n="code.focus3">Agentes IA</span>"</span>
   <span class="tok-punc">],</span>
-  <span class="tok-key">stack</span><span class="tok-punc">: [</span><span class="tok-str">"HTML"</span><span class="tok-punc">,</span> <span class="tok-str">"CSS"</span><span class="tok-punc">,</span> <span class="tok-str">"JavaScript"</span><span class="tok-punc">,</span> <span class="tok-str">"n8n"</span><span class="tok-punc">],</span>
-  <span class="tok-key">status</span><span class="tok-punc">:</span> <span class="tok-str">"<span data-i18n="code.status">disponible para proyectos</span>"</span>
+  <span class="tok-key">stack</span><span class="tok-punc">: [</span><span class="tok-str">"HTML"</span><span class="tok-punc">,</span> <span class="tok-str">"CSS"</span><span class="tok-punc">,</span> <span class="tok-str">"JavaScript"</span><span class="tok-punc">,</span> <span class="tok-str">"n8n"</span><span class="tok-punc">,</span> <span class="tok-str">"LLMs"</span><span class="tok-punc">],</span>
+  <span class="tok-key">status</span><span class="tok-punc">:</span> <span class="tok-str">"<span data-i18n="code.status">disponible · remoto · full time</span>"</span>
 <span class="tok-punc">};</span><span class="cursor" aria-hidden="true"></span></code></pre>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FASE 1 (temporal): vista previa de las variantes de ventana. Se elimina en la Fase 2. -->
-    <section class="section" id="proyectos">
-      <div class="ambient ambient--preview" aria-hidden="true"><span></span><span></span></div>
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow" data-i18n="preview.eyebrow">// fase 1</p>
-          <h2 class="section-title" data-i18n="preview.title">Componente <em class="kw">ventana</em></h2>
-          <p class="lead" data-i18n="preview.lead">Las tres variantes que se usarán en el sitio: código, chat y tarjeta de proyecto.</p>
-        </div>
+    <!-- Cierre -->
+    <section class="section" id="contacto">
+      <div class="ambient ambient--outro" aria-hidden="true"><span></span><span></span></div>
 
-        <div class="preview-grid">
-          <div class="window">
-            <div class="window__bar">
-              <span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="window__title">claudia.chat</span>
-            </div>
-            <div class="window__body chat">
-              <p class="chat__msg chat__msg--bot" data-i18n="preview.chatBot">¡Hola! Soy Claudia, la asistente de Diego. Tocá una pregunta rápida o escribí la tuya.</p>
-              <p class="chat__msg chat__msg--user" data-i18n="preview.chatUser">Quiero ver tus proyectos.</p>
+      <div class="container narrow">
+        <article class="outro">
+          <div class="outro__photo">
+            <img src="img/diego-roldan.jpg" width="765" height="1024" alt="" loading="lazy">
+            <span class="outro__wave"><span class="hand" aria-hidden="true">👋</span> <span data-i18n="outro.wave">¡Hola!</span></span>
+          </div>
+          <div class="outro__text">
+            <h2 class="section-title" data-i18n="outro.title">Gracias por pasar. <em class="kw">Hablemos.</em></h2>
+            <p data-i18n="outro.text">Soy desarrollador full stack jr. y construyo sitios, automatizaciones y agentes de IA. Busco trabajo remoto y también tomo proyectos freelance.</p>
+            <p class="status"><i aria-hidden="true"></i><span data-i18n="outro.status">Disponible · remoto · full time</span></p>
+            <div class="outro__links">
+              <a class="btn btn--primary" href="mailto:diegoroldan.work@gmail.com">Email</a>
+              <a class="btn" href="https://www.linkedin.com/in/diegonicolasroldan/" target="_blank" rel="noopener">LinkedIn <span class="sr-only" data-i18n="a11y.newTab">(se abre en una pestaña nueva)</span></a>
+              <a class="btn" href="https://github.com/diegoroldanwork" target="_blank" rel="noopener">GitHub <span class="sr-only" data-i18n="a11y.newTab">(se abre en una pestaña nueva)</span></a>
             </div>
           </div>
-
-          <article class="window window--link">
-            <div class="window__bar">
-              <span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="window__title">proyecto-ejemplo.html</span>
-            </div>
-            <div class="window__body">
-              <h3 data-i18n="preview.projectTitle">Proyecto de ejemplo</h3>
-              <p class="project__desc" data-i18n="preview.projectDesc">Descripción breve del proyecto. Se cargará desde data/projects.json.</p>
-              <ul class="tags">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-              </ul>
-            </div>
-          </article>
-        </div>
+        </article>
       </div>
     </section>
-
-    <!-- Fases siguientes -->
-    <section class="section" id="sobre-mi" hidden></section>
-    <section class="section" id="contacto" hidden></section>
   </main>
 
   <footer class="site-footer">

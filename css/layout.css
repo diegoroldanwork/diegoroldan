@@ -4,54 +4,138 @@
 
 /* Fondo ambiental: posición de las manchas por sección -------------------- */
 
-.ambient--hero span:nth-child(1) { --c: var(--blob-1); --size: 560px; top: -12%;  left: -14%; }
-.ambient--hero span:nth-child(2) { --c: var(--blob-2); --size: 620px; top: 0;     right: -10%; animation-delay: -20s; }
-.ambient--preview span:nth-child(1) { --c: var(--blob-3); --size: 600px; top: 20%;  left: 5%; animation-delay: -10s; }
-.ambient--preview span:nth-child(2) { --c: var(--blob-1); --size: 460px; bottom: -10%; right: 0; animation-delay: -32s; }
+.ambient--hero span:nth-child(1) { --c: var(--blob-1); --size: 520px; top: -18%; left: -12%; }
+.ambient--hero span:nth-child(2) { --c: var(--blob-2); --size: 500px; top: 30%;  right: -12%; animation-delay: -16s; }
+.ambient--hero span:nth-child(3) { --c: var(--blob-3); --size: 460px; bottom: -14%; left: 30%; animation-delay: -32s; }
+.ambient--outro span:nth-child(1) { --c: var(--blob-3); --size: 520px; top: 0;     left: 0;  animation-delay: -10s; }
+.ambient--outro span:nth-child(2) { --c: var(--blob-1); --size: 420px; bottom: -10%; right: 5%; animation-delay: -28s; }
 
-@media (max-width: 880px) {
-  /* hero en una columna: la mancha azul baja detrás de developer.js */
-  .ambient--hero span:nth-child(2) { top: auto; bottom: 0; }
-}
+/* Contenedor angosto (chat, código, cierre) -------------------------------- */
 
-/* Hero -------------------------------------------------------------------- */
+.narrow { width: min(760px, 100% - 2 * var(--gutter)); }
 
-.hero {
+.section--tight { padding-block: clamp(32px, 6vw, 56px); }
+
+/* Hero: presentación + chat ----------------------------------------------- */
+
+.hero { padding-top: clamp(40px, 7vw, 72px); }
+
+.hero__inner {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  align-items: center;
-  gap: clamp(32px, 6vw, 72px);
+  gap: 32px;
+  width: min(760px, 100% - 2 * var(--gutter));
 }
 
-.hero > * { min-width: 0; }
-.hero__text { display: grid; gap: 20px; }
+.intro {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  text-align: center;
+}
 
-.hero__actions {
+.kicker {
+  margin-top: 4px;
+  font: 500 12px/1.4 var(--font-mono);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.intro .title-xl {
+  font-size: clamp(2.1rem, 5vw, 3.5rem);
+  font-weight: 650;
+  text-wrap: balance;
+}
+
+.chat__note {
+  margin-top: -18px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Cierre ------------------------------------------------------------------ */
+
+.outro {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+/* Foto completa: la caja tiene la proporción de la imagen, así cover no recorta */
+.outro__photo {
+  position: relative;
+  align-self: start;
+  aspect-ratio: 765 / 1024;
+}
+.outro__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.outro__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 55%, rgba(10, 15, 12, .85)),
+    linear-gradient(0deg, rgba(10, 15, 12, .7), transparent 40%);
+}
+
+/* Burbuja sobre la foto: tinte oscuro fijo para no depender de la imagen */
+.outro__wave {
+  position: absolute;
+  z-index: 1;
+  left: 18px;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background: rgba(10, 15, 12, .6);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  font-size: 13px;
+}
+
+.hand {
+  display: inline-block;
+  font-size: 20px;
+  transform-origin: 70% 70%;
+  animation: wave 2.4s ease-in-out 2;   /* saluda dos veces y se queda quieta */
+}
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0); }
+  10%, 30% { transform: rotate(16deg); }
+  20%, 40% { transform: rotate(-8deg); }
+}
+
+.outro__text {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 14px;
+  padding: 32px 32px 30px;
+}
+.outro__text p:not(.status) { color: var(--muted); font-size: 15px; line-height: 1.65; }
+
+.outro__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 8px;
+  margin-top: 6px;
 }
 
-@media (max-width: 880px) {
-  .hero { grid-template-columns: 1fr; }
-}
-
-/* Encabezado de sección --------------------------------------------------- */
-
-.section-head {
-  display: grid;
-  gap: 12px;
-  margin-bottom: 40px;
-}
-
-/* Vista previa de componentes (temporal, Fase 1) -------------------------- */
-
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 24px;
-  align-items: start;
+@media (max-width: 720px) {
+  .outro { grid-template-columns: 1fr; }
+  .outro__photo::after { background: linear-gradient(0deg, rgba(10, 15, 12, .9), transparent 50%); }
+  .outro__text { padding: 24px 22px 26px; }
 }
 
 /* Footer ------------------------------------------------------------------ */

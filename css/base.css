@@ -12,6 +12,7 @@
   --accent: #c8f135;
   --on-accent: #0a0f0c;
   --accent-hover: #d6f55e;
+  --ok: #3ddc84;                /* punto de estado "disponible" */
 
   /* Manchas de fondo */
   --blob-1: #c8f135;
@@ -22,7 +23,6 @@
 
   /* Vidrio */
   --glass-bg: rgba(18, 26, 21, .35);               /* --surface translúcido: apaga las manchas detrás del texto (AA) */
-  --glass-bg-strong: rgba(255, 255, 255, .06);    /* barras y elementos chicos */
   --glass-fallback: var(--surface);                /* sin backdrop-filter */
   --glass-border: rgba(255, 255, 255, .12);
   --glass-border-soft: rgba(255, 255, 255, .07);   /* separadores internos */
@@ -40,7 +40,7 @@
   --gutter: clamp(20px, 4vw, 40px);
   --radius: 12px;
   --radius-sm: 8px;
-  --header-h: 64px;
+  --header-h: 60px;
 
   /* Movimiento */
   --ease: cubic-bezier(.2, .7, .2, 1);
@@ -54,7 +54,7 @@
 html {
   color-scheme: dark;
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: calc(var(--header-h) + 16px);
+  scroll-padding-top: calc(var(--header-h) + 28px);
 }
 
 body {

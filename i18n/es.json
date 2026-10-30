@@ -1,40 +1,84 @@
 {
   "meta": {
-    "title": "Diego Nicolás Roldán — Desarrollador web",
+    "title": "Diego Nicolás Roldán — Desarrollador full stack",
     "description": "Portfolio de Diego Nicolás Roldán: desarrollo web, automatización e inteligencia artificial."
   },
   "a11y": {
     "skip": "Saltar al contenido",
     "nav": "Navegación principal",
-    "lang": "Idioma"
+    "lang": "Idioma",
+    "chatLog": "Conversación con Claudia",
+    "chips": "Preguntas rápidas",
+    "input": "Escribí tu pregunta",
+    "send": "Enviar",
+    "typing": "Claudia está escribiendo",
+    "photo": "Foto de Diego Nicolás Roldán",
+    "newTab": "(se abre en una pestaña nueva)"
   },
   "nav": {
-    "projects": "Proyectos",
     "about": "Sobre mí",
+    "projects": "Proyectos",
+    "stack": "Stack",
     "contact": "Contacto"
   },
   "hero": {
-    "eyebrow": "// hola, soy",
-    "title": "Diego Nicolás *Roldán*",
-    "lead": "Desarrollador web. Construyo sitios rápidos y automatizaciones con IA que resuelven problemas reales.",
-    "ctaProjects": "Ver proyectos",
-    "ctaContact": "Contacto"
+    "kicker": "Full stack · Automatización · IA",
+    "title": "Hola, soy Diego. *Preguntame* lo que quieras."
+  },
+  "chat": {
+    "greeting": "¡Hola! Soy Claudia, la asistente de Diego. Tocá una pregunta rápida o escribí la tuya.",
+    "placeholder": "¿Qué proyectos hiciste con IA?",
+    "note": "Las preguntas rápidas tienen respuestas fijas · texto libre con IA: próximamente",
+    "soon": "Las preguntas libres llegan **próximamente**: todavía estoy aprendiendo sobre Diego. Mientras tanto, tocá una de las preguntas rápidas.",
+    "chips": {
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "stack": "Stack",
+      "certs": "Certificaciones",
+      "contact": "Contacto"
+    },
+    "answers": {
+      "about": {
+        "q": "Contame sobre vos",
+        "text": "Soy **Diego Nicolás Roldán**, argentino, vivo en Rio de Janeiro. Vengo de gastronomía y atención al público, y hoy construyo sitios web, automatizaciones y agentes de IA. Hablo español y portugués. Busco trabajo remoto, full time."
+      },
+      "projects": {
+        "q": "¿Qué proyectos hiciste?",
+        "text": "Algunos:"
+      },
+      "stack": {
+        "q": "¿Con qué tecnologías trabajás?",
+        "text": "Mi stack hoy:",
+        "tags": ["HTML", "CSS", "JavaScript", "n8n", "APIs", "Webhooks", "LLMs", "Git"]
+      },
+      "certs": {
+        "q": "¿Qué certificaciones tenés?",
+        "text": "Las más recientes:",
+        "cards": [
+          { "title": "N8N · IA Club", "desc": "Automatizaciones con IA · calificación 10 · 08/2026" },
+          { "title": "Engenharia de Prompt", "desc": "IA Club · calificación 10 · 07/2026" },
+          { "title": "Missão Programação do Zero", "desc": "HTML, CSS y JavaScript · calificación 10" }
+        ],
+        "tags": ["HTML", "CSS", "Git y GitHub", "JavaScript do Zero · Trybe"]
+      },
+      "contact": {
+        "q": "¿Cómo te contacto?",
+        "text": "Por email, LinkedIn o WhatsApp. Respondo en el día. Mi código está en GitHub."
+      }
+    }
   },
   "code": {
-    "role": "Desarrollador web",
+    "role": "Desarrollador full stack jr.",
     "focus1": "Desarrollo web",
     "focus2": "Automatización",
     "focus3": "Agentes IA",
-    "status": "disponible para proyectos"
+    "status": "disponible · remoto · full time"
   },
-  "preview": {
-    "eyebrow": "// fase 1",
-    "title": "Componente *ventana*",
-    "lead": "Las tres variantes que se usarán en el sitio: código, chat y tarjeta de proyecto.",
-    "chatBot": "¡Hola! Soy Claudia, la asistente de Diego. Tocá una pregunta rápida o escribí la tuya.",
-    "chatUser": "Quiero ver tus proyectos.",
-    "projectTitle": "Proyecto de ejemplo",
-    "projectDesc": "Descripción breve del proyecto. Se cargará desde data/projects.json."
+  "outro": {
+    "wave": "¡Hola!",
+    "title": "Gracias por pasar. *Hablemos.*",
+    "text": "Soy desarrollador full stack jr. y construyo sitios, automatizaciones y agentes de IA. Busco trabajo remoto y también tomo proyectos freelance.",
+    "status": "Disponible · remoto · full time"
   },
   "footer": {
     "rights": "Hecho a mano, sin frameworks."

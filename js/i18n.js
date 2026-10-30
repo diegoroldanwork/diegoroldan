@@ -25,6 +25,11 @@ export function t(key) {
   return typeof value === 'string' ? value : key;
 }
 
+// Valor crudo (objetos, listas) del idioma actual.
+export function tr(key) {
+  return lookup(dict, key);
+}
+
 export function getLang() {
   return current;
 }

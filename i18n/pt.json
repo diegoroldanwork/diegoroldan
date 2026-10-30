@@ -1,40 +1,84 @@
 {
   "meta": {
-    "title": "Diego Nicolás Roldán — Desenvolvedor web",
+    "title": "Diego Nicolás Roldán — Desenvolvedor full stack",
     "description": "Portfólio de Diego Nicolás Roldán: desenvolvimento web, automação e inteligência artificial."
   },
   "a11y": {
     "skip": "Pular para o conteúdo",
     "nav": "Navegação principal",
-    "lang": "Idioma"
+    "lang": "Idioma",
+    "chatLog": "Conversa com a Claudia",
+    "chips": "Perguntas rápidas",
+    "input": "Escreva sua pergunta",
+    "send": "Enviar",
+    "typing": "Claudia está digitando",
+    "photo": "Foto de Diego Nicolás Roldán",
+    "newTab": "(abre em uma nova aba)"
   },
   "nav": {
-    "projects": "Projetos",
     "about": "Sobre mim",
+    "projects": "Projetos",
+    "stack": "Stack",
     "contact": "Contato"
   },
   "hero": {
-    "eyebrow": "// olá, eu sou",
-    "title": "Diego Nicolás *Roldán*",
-    "lead": "Desenvolvedor web. Crio sites rápidos e automações com IA que resolvem problemas reais.",
-    "ctaProjects": "Ver projetos",
-    "ctaContact": "Contato"
+    "kicker": "Full stack · Automação · IA",
+    "title": "Oi, eu sou o Diego. *Pergunte* o que quiser."
+  },
+  "chat": {
+    "greeting": "Oi! Sou a Claudia, assistente do Diego. Toque numa pergunta rápida ou escreva a sua.",
+    "placeholder": "Quais projetos você fez com IA?",
+    "note": "As perguntas rápidas têm respostas fixas · texto livre com IA: em breve",
+    "soon": "As perguntas livres chegam **em breve**: ainda estou aprendendo sobre o Diego. Enquanto isso, toque numa das perguntas rápidas.",
+    "chips": {
+      "about": "Sobre mim",
+      "projects": "Projetos",
+      "stack": "Stack",
+      "certs": "Certificações",
+      "contact": "Contato"
+    },
+    "answers": {
+      "about": {
+        "q": "Me fala sobre você",
+        "text": "Sou **Diego Nicolás Roldán**, argentino, moro no Rio de Janeiro. Venho da gastronomia e do atendimento ao público e hoje crio sites, automações e agentes de IA. Falo espanhol e português. Busco trabalho remoto, em tempo integral."
+      },
+      "projects": {
+        "q": "Quais projetos você fez?",
+        "text": "Alguns:"
+      },
+      "stack": {
+        "q": "Com quais tecnologias você trabalha?",
+        "text": "Meu stack hoje:",
+        "tags": ["HTML", "CSS", "JavaScript", "n8n", "APIs", "Webhooks", "LLMs", "Git"]
+      },
+      "certs": {
+        "q": "Quais certificações você tem?",
+        "text": "As mais recentes:",
+        "cards": [
+          { "title": "N8N · IA Club", "desc": "Automações com IA · nota 10 · 08/2026" },
+          { "title": "Engenharia de Prompt", "desc": "IA Club · nota 10 · 07/2026" },
+          { "title": "Missão Programação do Zero", "desc": "HTML, CSS e JavaScript · nota 10" }
+        ],
+        "tags": ["HTML", "CSS", "Git e GitHub", "JavaScript do Zero · Trybe"]
+      },
+      "contact": {
+        "q": "Como entro em contato?",
+        "text": "Por e-mail, LinkedIn ou WhatsApp. Respondo no mesmo dia. Meu código está no GitHub."
+      }
+    }
   },
   "code": {
-    "role": "Desenvolvedor web",
+    "role": "Desenvolvedor full stack jr.",
     "focus1": "Desenvolvimento web",
     "focus2": "Automação",
     "focus3": "Agentes de IA",
-    "status": "disponível para projetos"
+    "status": "disponível · remoto · tempo integral"
   },
-  "preview": {
-    "eyebrow": "// fase 1",
-    "title": "Componente *janela*",
-    "lead": "As três variantes que serão usadas no site: código, chat e card de projeto.",
-    "chatBot": "Oi! Sou a Claudia, assistente do Diego. Toque numa pergunta rápida ou escreva a sua.",
-    "chatUser": "Quero ver seus projetos.",
-    "projectTitle": "Projeto de exemplo",
-    "projectDesc": "Breve descrição do projeto. Será carregada de data/projects.json."
+  "outro": {
+    "wave": "Oi!",
+    "title": "Obrigado pela visita. *Vamos conversar.*",
+    "text": "Sou desenvolvedor full stack jr. e crio sites, automações e agentes de IA. Busco trabalho remoto e também pego projetos freelance.",
+    "status": "Disponível · remoto · tempo integral"
   },
   "footer": {
     "rights": "Feito à mão, sem frameworks."

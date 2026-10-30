@@ -1,40 +1,84 @@
 {
   "meta": {
-    "title": "Diego Nicolás Roldán — Web Developer",
+    "title": "Diego Nicolás Roldán — Full Stack Developer",
     "description": "Portfolio of Diego Nicolás Roldán: web development, automation and artificial intelligence."
   },
   "a11y": {
     "skip": "Skip to content",
     "nav": "Main navigation",
-    "lang": "Language"
+    "lang": "Language",
+    "chatLog": "Conversation with Claudia",
+    "chips": "Quick questions",
+    "input": "Type your question",
+    "send": "Send",
+    "typing": "Claudia is typing",
+    "photo": "Photo of Diego Nicolás Roldán",
+    "newTab": "(opens in a new tab)"
   },
   "nav": {
-    "projects": "Projects",
     "about": "About",
+    "projects": "Projects",
+    "stack": "Stack",
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "// hi, I'm",
-    "title": "Diego Nicolás *Roldán*",
-    "lead": "Web developer. I build fast websites and AI-powered automations that solve real problems.",
-    "ctaProjects": "View projects",
-    "ctaContact": "Contact"
+    "kicker": "Full stack · Automation · AI",
+    "title": "Hi, I'm Diego. *Ask* me anything."
+  },
+  "chat": {
+    "greeting": "Hi! I'm Claudia, Diego's assistant. Tap a quick question or type your own.",
+    "placeholder": "What AI projects have you built?",
+    "note": "Quick questions have fixed answers · free-form AI chat: coming soon",
+    "soon": "Free-form questions are **coming soon**: I'm still learning about Diego. Meanwhile, tap one of the quick questions.",
+    "chips": {
+      "about": "About me",
+      "projects": "Projects",
+      "stack": "Stack",
+      "certs": "Certifications",
+      "contact": "Contact"
+    },
+    "answers": {
+      "about": {
+        "q": "Tell me about yourself",
+        "text": "I'm **Diego Nicolás Roldán**, from Argentina, living in Rio de Janeiro. I come from hospitality and customer service, and today I build websites, automations and AI agents. I speak Spanish and Portuguese. I'm looking for a remote, full-time role."
+      },
+      "projects": {
+        "q": "What projects have you built?",
+        "text": "A few:"
+      },
+      "stack": {
+        "q": "What technologies do you work with?",
+        "text": "My stack today:",
+        "tags": ["HTML", "CSS", "JavaScript", "n8n", "APIs", "Webhooks", "LLMs", "Git"]
+      },
+      "certs": {
+        "q": "What certifications do you have?",
+        "text": "The most recent:",
+        "cards": [
+          { "title": "N8N · IA Club", "desc": "AI automations · grade 10 · 08/2026" },
+          { "title": "Engenharia de Prompt", "desc": "IA Club · grade 10 · 07/2026" },
+          { "title": "Missão Programação do Zero", "desc": "HTML, CSS and JavaScript · grade 10" }
+        ],
+        "tags": ["HTML", "CSS", "Git & GitHub", "JavaScript do Zero · Trybe"]
+      },
+      "contact": {
+        "q": "How can I reach you?",
+        "text": "By email, LinkedIn or WhatsApp. I reply the same day. My code is on GitHub."
+      }
+    }
   },
   "code": {
-    "role": "Web developer",
+    "role": "Junior full stack developer",
     "focus1": "Web development",
     "focus2": "Automation",
     "focus3": "AI agents",
-    "status": "open to projects"
+    "status": "available · remote · full time"
   },
-  "preview": {
-    "eyebrow": "// phase 1",
-    "title": "*Window* component",
-    "lead": "The three variants used across the site: code, chat and project card.",
-    "chatBot": "Hi! I'm Claudia, Diego's assistant. Tap a quick question or type your own.",
-    "chatUser": "I'd like to see your projects.",
-    "projectTitle": "Sample project",
-    "projectDesc": "Short project description. It will be loaded from data/projects.json."
+  "outro": {
+    "wave": "Hi!",
+    "title": "Thanks for stopping by. *Let's talk.*",
+    "text": "I'm a junior full stack developer building websites, automations and AI agents. I'm looking for remote work and also take on freelance projects.",
+    "status": "Available · remote · full time"
   },
   "footer": {
     "rights": "Handmade, no frameworks."

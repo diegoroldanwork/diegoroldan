@@ -1,3 +1,31 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "id": "noctua",
+      "title": { "es": "Noctua", "pt": "Noctua", "en": "Noctua" },
+      "description": {
+        "es": "App para productores de eventos: listas, caja y cierre de noche.",
+        "pt": "App para produtores de eventos: listas, caixa e fechamento da noite.",
+        "en": "App for event producers: guest lists, cash register and end-of-night closing."
+      }
+    },
+    {
+      "id": "agente-sdr",
+      "title": { "es": "Agente SDR por WhatsApp", "pt": "Agente SDR no WhatsApp", "en": "WhatsApp SDR agent" },
+      "description": {
+        "es": "n8n + IA que califica y responde clientes de una marca real.",
+        "pt": "n8n + IA que qualifica e responde clientes de uma marca real.",
+        "en": "n8n + AI that qualifies and replies to customers for a real brand."
+      }
+    },
+    {
+      "id": "cachorro-na-lente",
+      "title": { "es": "Cachorro na lente", "pt": "Cachorro na lente", "en": "Cachorro na lente" },
+      "description": {
+        "es": "Portfolio de fotografía con SEO local.",
+        "pt": "Portfólio de fotografia com SEO local.",
+        "en": "Photography portfolio with local SEO."
+      }
+    }
+  ]
 }
