@@ -10,7 +10,7 @@
 - Trabaja de forma remota desde Brasil y Argentina, zona horaria UTC-3.
 
 ## Trayectoria
-- Más de 15 años en gastronomía y en la noche: bartender desde los 18 años y después productor de fiestas en Rio de Janeiro.
+- 11 años en gastronomía y en la noche: bartender desde los 18 años y después productor de fiestas en Rio de Janeiro.
 - De ahí trae experiencia en atención al público, trabajo bajo presión, resolución de problemas en el momento y trato con clientes.
 - Llegó a la programación buscando un trabajo que pudiera hacer desde casa, empezó por curiosidad y se dedicó de lleno.
 - Noctua nació de su experiencia como productor: conocía el problema desde adentro.

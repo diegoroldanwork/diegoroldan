@@ -46,7 +46,7 @@
     "answers": {
       "about": {
         "q": "Me fala sobre você",
-        "text": "Sou **Diego Nicolás Roldán**, argentino. Trabalhei mais de 15 anos em gastronomia e na noite, e hoje crio sites, automações e agentes de IA. Trabalho remoto do Brasil e da Argentina (UTC-3). Falo espanhol nativo, português fluente e inglês básico. Busco trabalho remoto em tempo integral, efetivo ou freelance.",
+        "text": "Sou **Diego Nicolás Roldán**, argentino. Trabalhei 11 anos em gastronomia e na noite, e hoje crio sites, automações e agentes de IA. Trabalho remoto do Brasil e da Argentina (UTC-3). Falo espanhol nativo, português fluente e inglês básico. Busco trabalho remoto em tempo integral, efetivo ou freelance.",
         "more": "Ver sobre mim"
       },
       "projects": {
@@ -105,7 +105,7 @@
   "about": {
     "kicker": "Sobre mim",
     "title": "Da noite ao *código*",
-    "p1": "Trabalhei mais de 15 anos em gastronomia e na noite: bartender e depois produtor de festas no Rio de Janeiro. Ali aprendi a resolver problemas sob pressão e a atender bem as pessoas.",
+    "p1": "Trabalhei 11 anos em gastronomia e na noite: bartender e depois produtor de festas no Rio de Janeiro. Ali aprendi a resolver problemas sob pressão e a atender bem as pessoas.",
     "p2": "Procurando um trabalho que pudesse fazer de casa, descobri a programação, e hoje crio sites, automações e agentes de IA.",
     "p3": "O Noctua nasceu dessa experiência: vi a noite por dentro e construí a ferramenta que faltava.",
     "languagesLabel": "Idiomas",

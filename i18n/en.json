@@ -46,7 +46,7 @@
     "answers": {
       "about": {
         "q": "Tell me about yourself",
-        "text": "I'm **Diego Nicolás Roldán**, from Argentina. I spent more than 15 years in hospitality and nightlife, and today I build websites, automations and AI agents. I work remotely from Brazil and Argentina (UTC-3). I speak Spanish (native), Portuguese (fluent) and basic English. I'm looking for remote full-time work, permanent or freelance.",
+        "text": "I'm **Diego Nicolás Roldán**, from Argentina. I spent 11 years in hospitality and nightlife, and today I build websites, automations and AI agents. I work remotely from Brazil and Argentina (UTC-3). I speak Spanish (native), Portuguese (fluent) and basic English. I'm looking for remote full-time work, permanent or freelance.",
         "more": "About me"
       },
       "projects": {
@@ -105,7 +105,7 @@
   "about": {
     "kicker": "About",
     "title": "From nightlife to *code*",
-    "p1": "I spent more than 15 years in hospitality and nightlife: bartender, then party producer in Rio de Janeiro. That's where I learned to solve problems under pressure and to take good care of people.",
+    "p1": "I spent 11 years in hospitality and nightlife: bartender, then party producer in Rio de Janeiro. That's where I learned to solve problems under pressure and to take good care of people.",
     "p2": "Looking for work I could do from home, I discovered programming, and today I build websites, automations and AI agents.",
     "p3": "Noctua was born from that experience: I saw nightlife from the inside and built the tool that was missing.",
     "languagesLabel": "Languages",
