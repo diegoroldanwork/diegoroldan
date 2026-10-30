@@ -1,26 +1,13 @@
-# Front estático (sin build) + función de Claudia (netlify/functions/chat.mjs → /api/chat).
-# El único build empaqueta el conocimiento de Claudia para la función.
-# Los encabezados de seguridad siguen en _headers.
+# Front estático + función de Claudia (netlify/functions/chat.mjs → /api/chat).
+# El build no compila el front: empaqueta el conocimiento de Claudia y copia a
+# dist/ sólo los archivos públicos. Los encabezados de seguridad están en _headers.
 
 [build]
-  publish = "."
-  # Empaqueta data/, i18n/ y claudia-conocimiento.md para la función
-  command = "node netlify/build-knowledge.mjs"
+  publish = "dist"
+  # 1) data/, i18n/ y claudia-conocimiento.md → módulo de la función
+  # 2) dist/ sin claudia-conocimiento.md ni netlify/
+  command = "node netlify/build-knowledge.mjs && node netlify/build-site.mjs"
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-
-# Archivos que sólo usa el build / la función: no se sirven al público.
-# force = true hace que la regla gane aunque el archivo exista.
-[[redirects]]
-  from = "/data/claudia-conocimiento.md"
-  to = "/404"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/netlify/*"
-  to = "/404"
-  status = 404
-  force = true

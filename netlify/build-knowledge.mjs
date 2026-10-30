@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Build de Netlify (y antes de probar en local):
+   Build de Netlify, paso 1 (y antes de probar la función en local):
      node netlify/build-knowledge.mjs
 
    Junta data/*.json, i18n/*.json y data/claudia-conocimiento.md en
