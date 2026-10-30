@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "Diego Nicolás Roldán — Desarrollador full stack",
+    "description": "Portfolio de Diego Nicolás Roldán: desarrollo web, automatización e inteligencia artificial."
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "nav": "Navegación principal",
+    "lang": "Idioma",
+    "chatLog": "Conversación con Claudia",
+    "chips": "Preguntas rápidas",
+    "input": "Escribí tu pregunta",
+    "send": "Enviar",
+    "typing": "Claudia está escribiendo",
+    "photo": "Foto de Diego Nicolás Roldán",
+    "newTab": "(se abre en una pestaña nueva)",
+    "menu": "Abrir menú",
+    "close": "Cerrar",
+    "certPrefix": "Certificado",
+    "viewCert": "Ver certificado"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "stack": "Stack",
+    "contact": "Contacto",
+    "education": "Formación",
+    "services": "Freelance"
+  },
+  "hero": {
+    "kicker": "Full stack · Automatización · IA",
+    "title": "Hola, soy Diego. *Preguntame* lo que quieras."
+  },
+  "chat": {
+    "greeting": "¡Hola! Soy Claudia, la asistente de Diego. Tocá una pregunta rápida o escribí la tuya.",
+    "placeholder": "¿Qué proyectos hiciste con IA?",
+    "note": "Claudia responde con IA y puede equivocarse · no compartas datos personales · hasta 5 preguntas libres por visita",
+    "soon": "Las preguntas libres llegan **próximamente**: todavía estoy aprendiendo sobre Diego. Mientras tanto, tocá una de las preguntas rápidas.",
+    "chips": {
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "stack": "Stack",
+      "certs": "Certificaciones",
+      "contact": "Contacto"
+    },
+    "answers": {
+      "about": {
+        "q": "Contame sobre vos",
+        "text": "Soy **Diego Nicolás Roldán**, argentino. Trabajé 11 años en gastronomía y en la noche, y hoy construyo sitios, automatizaciones y agentes de IA. Trabajo remoto desde Brasil y Argentina (UTC-3). Hablo español nativo, portugués fluido e inglés básico. Busco trabajo remoto full time, fijo o freelance.",
+        "more": "Ver sobre mí"
+      },
+      "projects": {
+        "q": "¿Qué proyectos hiciste?",
+        "text": "Estos son los principales:",
+        "more": "Ver proyectos"
+      },
+      "stack": {
+        "q": "¿Con qué tecnologías trabajás?",
+        "text": "Mi stack hoy:",
+        "more": "Ver stack"
+      },
+      "certs": {
+        "q": "¿Qué certificaciones tenés?",
+        "text": "Estoy cursando **Programador Full Stack Pro** en DevClub. Algunos certificados:",
+        "more": "Ver formación"
+      },
+      "contact": {
+        "q": "¿Cómo te contacto?",
+        "text": "Por email, LinkedIn o WhatsApp. Respondo en el día. Mi código está en GitHub."
+      }
+    },
+    "errors": {
+      "busy": "Ahora mismo tengo muchas consultas y no puedo responder. Probá de nuevo en un rato o escribile directo a Diego:",
+      "unavailable": "No pude responder esta vez. Si querés, escribile directo a Diego:",
+      "limit": "Llegaste al máximo de 5 preguntas libres por visita. Para seguir la charla, escribile a Diego:"
+    }
+  },
+  "code": {
+    "role": "Desarrollador full stack jr.",
+    "focus1": "Desarrollo web",
+    "focus2": "Automatización",
+    "focus3": "Agentes IA",
+    "status": "disponible · remoto · full time",
+    "learning": "en profundidad · DevClub Full Stack Pro"
+  },
+  "outro": {
+    "wave": "¡Hola!",
+    "title": "Gracias por pasar. *Hablemos.*",
+    "text": "Soy desarrollador full stack jr. y construyo sitios, automatizaciones y agentes de IA. Busco trabajo remoto y también tomo proyectos freelance.",
+    "status": "Disponible · remoto · full time"
+  },
+  "footer": {
+    "rights": "Hecho a mano, sin frameworks."
+  },
+  "projects": {
+    "kicker": "Proyectos",
+    "title": "Lo que *construí*",
+    "role": "Rol",
+    "privateRepo": "Repositorio privado"
+  },
+  "stack": {
+    "kicker": "Stack",
+    "title": "Con qué *trabajo*"
+  },
+  "about": {
+    "kicker": "Sobre mí",
+    "title": "De la noche al *código*",
+    "p1": "Trabajé 11 años en gastronomía y en la noche: bartender y después productor de fiestas en Rio de Janeiro. Ahí aprendí a resolver problemas bajo presión y a atender bien a la gente.",
+    "p2": "Buscando un trabajo que pudiera hacer desde casa descubrí la programación, y hoy construyo sitios, automatizaciones y agentes de IA.",
+    "p3": "Noctua nació de esa experiencia: vi la noche por dentro y construí la herramienta que faltaba.",
+    "languagesLabel": "Idiomas",
+    "languages": "Español nativo · portugués fluido · inglés básico (en aprendizaje)",
+    "lookingLabel": "Busco",
+    "looking": "Trabajo remoto full time (fijo o freelance)",
+    "locationLabel": "Ubicación",
+    "location": "Brasil · Argentina — remoto (UTC-3)"
+  },
+  "education": {
+    "kicker": "Formación",
+    "title": "Formación y *certificados*",
+    "grade": "nota",
+    "hours": "h"
+  },
+  "services": {
+    "kicker": "Freelance",
+    "title": "También tomo proyectos *freelance*",
+    "lead": "Si tenés un negocio, puedo ayudarte con esto:",
+    "cta": "Consultar",
+    "items": {
+      "landing": {
+        "title": "Landing pages",
+        "desc": "Sitios de una página, rápidos y claros, pensados para convertir visitas en consultas.",
+        "wa": "https://wa.me/5548999733214?text=Hola%20Diego%2C%20quiero%20consultar%20por%20una%20landing%20page"
+      },
+      "automation": {
+        "title": "Automatizaciones con n8n",
+        "desc": "Conecto tus herramientas para que las tareas repetitivas se hagan solas: planillas, mails, agendas y CRMs.",
+        "wa": "https://wa.me/5548999733214?text=Hola%20Diego%2C%20quiero%20consultar%20por%20una%20automatizaci%C3%B3n%20con%20n8n"
+      },
+      "agents": {
+        "title": "Agentes de IA para WhatsApp",
+        "desc": "Un asistente que responde consultas, agenda turnos y deriva a una persona cuando hace falta.",
+        "wa": "https://wa.me/5548999733214?text=Hola%20Diego%2C%20quiero%20consultar%20por%20un%20agente%20de%20IA%20para%20WhatsApp"
+      }
+    }
+  }
+}

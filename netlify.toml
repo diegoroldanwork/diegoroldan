@@ -1,0 +1,12 @@
+# Front estático (sin build) + función de Claudia (netlify/functions/chat.mjs → /api/chat).
+# El único build empaqueta el conocimiento de Claudia para la función.
+# Los encabezados de seguridad siguen en _headers.
+
+[build]
+  publish = "."
+  # Empaqueta data/, i18n/ y claudia-conocimiento.md para la función
+  command = "node netlify/build-knowledge.mjs"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

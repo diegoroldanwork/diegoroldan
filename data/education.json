@@ -1,0 +1,18 @@
+{
+  "courses": [
+    {
+      "name": "Programador Full Stack Pro",
+      "issuer": "DevClub",
+      "status": { "es": "En curso", "pt": "Em andamento", "en": "In progress" }
+    }
+  ],
+  "certs": [
+    { "id": "programacao-do-zero", "name": "Missão Programação do Zero", "issuer": "DevClub", "date": "2025-03-24", "grade": 10, "image": "img/cert-programacao-do-zero.webp", "width": 1024, "height": 726, "featured": true },
+    { "id": "n8n", "name": "N8N", "issuer": "IA Club (DevClub)", "date": "2026-08-01", "grade": 10, "image": "img/cert-n8n-ia-club.webp", "width": 1400, "height": 950, "featured": true },
+    { "id": "prompt", "name": "Engenharia de Prompt", "issuer": "IA Club (DevClub)", "date": "2026-07-18", "grade": 10, "image": "img/cert-engenharia-de-prompt.webp", "width": 1400, "height": 989, "featured": true },
+    { "id": "html", "name": "HTML", "issuer": "DevClub", "date": "2026-07-17", "image": "img/cert-html.webp", "width": 1400, "height": 948 },
+    { "id": "css", "name": "CSS", "issuer": "DevClub", "date": "2026-08-20", "image": "img/cert-css.webp", "width": 1400, "height": 942 },
+    { "id": "git", "name": "Git e GitHub", "issuer": "DevClub", "date": "2026-08-21", "image": "img/cert-git-github.webp", "width": 1400, "height": 951 },
+    { "id": "js", "name": "JavaScript do Zero", "issuer": "Trybe", "hours": 10, "image": "img/cert-javascript-do-zero.webp", "width": 1400, "height": 787 }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "groups": [
+    {
+      "id": "front",
+      "label": "Front-end",
+      "items": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js"]
+    },
+    {
+      "id": "back",
+      "label": { "es": "Back-end y datos", "pt": "Back-end e dados", "en": "Back end & data" },
+      "items": ["Supabase", "PostgreSQL", "Google Sheets"]
+    },
+    {
+      "id": "automation",
+      "label": { "es": "Automatización", "pt": "Automação", "en": "Automation" },
+      "items": ["n8n", "webhooks", { "es": "APIs REST", "pt": "APIs REST", "en": "REST APIs" }, "Evolution API"]
+    },
+    {
+      "id": "ai",
+      "label": { "es": "IA", "pt": "IA", "en": "AI" },
+      "items": ["Claude API", "LLMs", { "es": "agentes de IA", "pt": "agentes de IA", "en": "AI agents" }, "prompt engineering"]
+    },
+    {
+      "id": "tools",
+      "label": { "es": "Herramientas", "pt": "Ferramentas", "en": "Tools" },
+      "items": ["Git", "GitHub", "VS Code", "Claude Code", "Netlify", "Vitest", "VPS / Easypanel"]
+    },
+    {
+      "id": "learning",
+      "label": { "es": "Aprendiendo ahora", "pt": "Aprendendo agora", "en": "Learning now" },
+      "items": ["React", "Next.js", "TypeScript"],
+      "note": {
+        "es": "En profundidad · DevClub Full Stack Pro",
+        "pt": "A fundo · DevClub Full Stack Pro",
+        "en": "In depth · DevClub Full Stack Pro"
+      }
+    }
+  ]
+}

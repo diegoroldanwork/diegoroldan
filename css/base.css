@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Base: tokens, reset, tipografía y layout
+   ========================================================================== */
+
+:root {
+  /* Color — paleta Noctua */
+  --bg: #0a0f0c;
+  --surface: #121a15;
+  --text: #e8efe9;
+  --muted: #9aaba0;
+  /* Lima: sólo botones primarios, estados activos y una palabra clave por título */
+  --accent: #c8f135;
+  --on-accent: #0a0f0c;
+  --accent-hover: #d6f55e;
+  --ok: #3ddc84;                /* punto de estado "disponible" */
+
+  /* Manchas de fondo */
+  --blob-1: #c8f135;
+  --blob-2: #3ddc84;
+  --blob-3: #0e7490;
+  --blob-opacity: .18;
+  --blob-blur: clamp(50px, 8vw, 90px);
+
+  /* Vidrio */
+  --glass-bg: rgba(18, 26, 21, .35);               /* --surface translúcido: apaga las manchas detrás del texto (AA) */
+  --glass-fallback: var(--surface);                /* sin backdrop-filter */
+  --glass-border: rgba(255, 255, 255, .12);
+  --glass-border-soft: rgba(255, 255, 255, .07);   /* separadores internos */
+  --glass-blur: blur(24px) saturate(160%);
+  --glass-shine: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, 0) 90px);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, .10);
+  --glass-shadow: 0 24px 60px -24px rgba(0, 0, 0, .8);
+
+  /* Tipografía (sin fuentes externas: la CSP sólo permite 'self') */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Espaciado y medidas */
+  --max: 1120px;
+  --gutter: clamp(20px, 4vw, 40px);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --header-h: 60px;
+
+  /* Movimiento */
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --dur: 160ms;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 28px);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: clip;   /* las manchas de fondo se salen por los costados */
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.6 var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; }
+h1, h2, h3, p { margin: 0; }
+code, pre { font-family: var(--font-mono); }
+
+::selection { background: var(--accent); color: var(--on-accent); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Layout ------------------------------------------------------------------ */
+
+.container {
+  width: min(var(--max), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  isolation: isolate;   /* el fondo ambiental (z-index: -1) queda dentro de la sección */
+  padding-block: clamp(64px, 10vw, 112px);
+}
+.section + .section { border-top: 1px solid var(--glass-border-soft); }
+
+/* Fondo ambiental ---------------------------------------------------------
+   <div class="ambient" aria-hidden="true"><span></span><span></span></div>
+   Manchas muy difusas detrás del contenido para que el vidrio refracte algo.
+   ------------------------------------------------------------------------- */
+
+.ambient {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* Recorte horizontal acá y no sólo en body: Chrome en celular cuenta lo que
+     sobresale para el ancho de la página y la achica (489px en vez de 360) */
+  overflow-x: clip;
+}
+
+.ambient span {
+  position: absolute;
+  width: min(var(--size, 520px), 95vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--c) 0%, transparent 68%);
+  opacity: var(--blob-opacity);
+  filter: blur(var(--blob-blur));
+  animation: drift 48s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes drift {
+  to { transform: translate3d(40px, -30px, 0) scale(1.06); }
+}
+
+/* Tipografía -------------------------------------------------------------- */
+
+.eyebrow {
+  font: 500 13px/1 var(--font-mono);
+  color: var(--muted);
+  letter-spacing: .02em;
+}
+
+.title-xl {
+  font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.muted { color: var(--muted); }
+.kw { color: var(--accent); font-style: normal; }   /* palabra clave del título: *así* en i18n */
+
+/* Utilidades -------------------------------------------------------------- */
+
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px; left: 12px;
+  z-index: 1000;
+  padding: 8px 14px;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .ambient span { animation: none !important; }
+}
