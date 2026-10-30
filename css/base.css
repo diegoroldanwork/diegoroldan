@@ -105,6 +105,9 @@ code, pre { font-family: var(--font-mono); }
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  /* Recorte horizontal acá y no sólo en body: Chrome en celular cuenta lo que
+     sobresale para el ancho de la página y la achica (489px en vez de 360) */
+  overflow-x: clip;
 }
 
 .ambient span {

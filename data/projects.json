@@ -33,7 +33,16 @@
       },
       "privateRepo": true,
       "tags": ["Next.js", "React", "TypeScript", "Supabase (Postgres + RLS)", "Claude API", "Vitest"],
-      "image": null,
+      "image": {
+        "src": "img/projects/noctua.webp",
+        "width": 1200,
+        "height": 750,
+        "alt": {
+          "es": "Panel de Noctua: disponibilidad por fecha, con precios, cupos libres y ocupación (datos de ejemplo)",
+          "pt": "Painel do Noctua: vagas por data, com preços, vagas livres e ocupação (dados de exemplo)",
+          "en": "Noctua dashboard: availability by date, with prices, free spots and occupancy (sample data)"
+        }
+      },
       "links": [
         {
           "label": { "es": "Demo a pedido", "pt": "Demo sob pedido", "en": "Demo on request" },
