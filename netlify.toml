@@ -10,3 +10,17 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+# Archivos que sólo usa el build / la función: no se sirven al público.
+# force = true hace que la regla gane aunque el archivo exista.
+[[redirects]]
+  from = "/data/claudia-conocimiento.md"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404"
+  status = 404
+  force = true
