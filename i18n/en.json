@@ -34,7 +34,7 @@
   "chat": {
     "greeting": "Hi! I'm Claudia, Diego's assistant. Tap a quick question or type your own.",
     "placeholder": "What AI projects have you built?",
-    "note": "Quick questions have fixed answers · free-form AI chat: coming soon",
+    "note": "Claudia answers with AI and can make mistakes · don't share personal data · up to 5 free-form questions per visit",
     "soon": "Free-form questions are **coming soon**: I'm still learning about Diego. Meanwhile, tap one of the quick questions.",
     "chips": {
       "about": "About me",
@@ -68,6 +68,11 @@
         "q": "How can I reach you?",
         "text": "By email, LinkedIn or WhatsApp. I reply the same day. My code is on GitHub."
       }
+    },
+    "errors": {
+      "busy": "I'm getting too many questions right now and can't reply. Try again in a bit or write to Diego directly:",
+      "unavailable": "I couldn't answer this time. If you like, write to Diego directly:",
+      "limit": "You've reached the limit of 5 free-form questions per visit. To keep talking, write to Diego:"
     }
   },
   "code": {

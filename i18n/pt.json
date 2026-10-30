@@ -34,7 +34,7 @@
   "chat": {
     "greeting": "Oi! Sou a Claudia, assistente do Diego. Toque numa pergunta rápida ou escreva a sua.",
     "placeholder": "Quais projetos você fez com IA?",
-    "note": "As perguntas rápidas têm respostas fixas · texto livre com IA: em breve",
+    "note": "A Claudia responde com IA e pode errar · não compartilhe dados pessoais · até 5 perguntas livres por visita",
     "soon": "As perguntas livres chegam **em breve**: ainda estou aprendendo sobre o Diego. Enquanto isso, toque numa das perguntas rápidas.",
     "chips": {
       "about": "Sobre mim",
@@ -68,6 +68,11 @@
         "q": "Como entro em contato?",
         "text": "Por e-mail, LinkedIn ou WhatsApp. Respondo no mesmo dia. Meu código está no GitHub."
       }
+    },
+    "errors": {
+      "busy": "Agora estou com muitas perguntas e não consigo responder. Tente de novo daqui a pouco ou escreva direto para o Diego:",
+      "unavailable": "Não consegui responder desta vez. Se quiser, escreva direto para o Diego:",
+      "limit": "Você chegou ao máximo de 5 perguntas livres por visita. Para continuar a conversa, escreva para o Diego:"
     }
   },
   "code": {

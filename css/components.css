@@ -675,3 +675,9 @@
 .service h3 { font-size: 1.1rem; }
 .service p { color: var(--muted); font-size: 14.5px; line-height: 1.6; }
 .service .btn { margin-top: 6px; }
+
+/* Chat con IA: párrafos y estado de espera */
+.chat__msg p + p { margin-top: 8px; }
+.chat[aria-busy="true"] .chip,
+.chat[aria-busy="true"] .chat__input,
+.chat[aria-busy="true"] .chat__send { opacity: .55; cursor: wait; }
