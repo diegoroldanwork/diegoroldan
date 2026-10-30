@@ -9,12 +9,58 @@
 .ambient--hero span:nth-child(3) { --c: var(--blob-3); --size: 460px; bottom: -14%; left: 30%; animation-delay: -32s; }
 .ambient--outro span:nth-child(1) { --c: var(--blob-3); --size: 520px; top: 0;     left: 0;  animation-delay: -10s; }
 .ambient--outro span:nth-child(2) { --c: var(--blob-1); --size: 420px; bottom: -10%; right: 5%; animation-delay: -28s; }
+.ambient--projects span:nth-child(1) { --c: var(--blob-2); --size: 520px; top: 8%;  right: -10%; animation-delay: -8s; }
+.ambient--projects span:nth-child(2) { --c: var(--blob-3); --size: 480px; bottom: 5%; left: -12%; animation-delay: -24s; }
+.ambient--about span { --c: var(--blob-1); --size: 460px; top: 10%; right: 0; animation-delay: -18s; }
+.ambient--services span { --c: var(--blob-3); --size: 480px; top: 0; left: 20%; animation-delay: -36s; }
 
-/* Contenedor angosto (chat, código, cierre) -------------------------------- */
+/* Contenedor angosto (chat, cierre) ---------------------------------------- */
 
 .narrow { width: min(760px, 100% - 2 * var(--gutter)); }
 
-.section--tight { padding-block: clamp(32px, 6vw, 56px); }
+/* Encabezado de sección --------------------------------------------------- */
+
+.section-head {
+  display: grid;
+  gap: 10px;
+  margin-bottom: clamp(28px, 4vw, 40px);
+}
+.section-head .kicker { margin-top: 0; }
+
+/* Proyectos --------------------------------------------------------------- */
+
+.projects { display: grid; gap: 24px; }
+
+/* Stack + developer.js ---------------------------------------------------- */
+
+.stack-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: start;
+}
+.stack-layout .window--code { position: sticky; top: calc(var(--header-h) + 36px); }
+
+@media (max-width: 900px) {
+  .stack-layout { grid-template-columns: 1fr; }
+  .stack-layout .window--code { position: static; }
+}
+
+/* Sobre mí ---------------------------------------------------------------- */
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: end;
+}
+.about__text > p { color: var(--muted); font-size: 16.5px; line-height: 1.7; max-width: 62ch; }
+.about__text > p + p { margin-top: 14px; }
+.about__text > p:last-child { color: var(--text); }
+
+@media (max-width: 820px) {
+  .about { grid-template-columns: 1fr; }
+}
 
 /* Hero: presentación + chat ----------------------------------------------- */
 

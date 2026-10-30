@@ -2,30 +2,125 @@
   "projects": [
     {
       "id": "noctua",
-      "title": { "es": "Noctua", "pt": "Noctua", "en": "Noctua" },
-      "description": {
-        "es": "App para productores de eventos: listas, caja y cierre de noche.",
-        "pt": "App para produtores de eventos: listas, caixa e fechamento da noite.",
-        "en": "App for event producers: guest lists, cash register and end-of-night closing."
-      }
+      "file": "noctua.app",
+      "title": "Noctua",
+      "short": {
+        "es": "Sistema con agentes de IA para productoras de fiestas: atiende por WhatsApp, controla cupos y organiza promotores.",
+        "pt": "Sistema com agentes de IA para produtoras de festas: atende pelo WhatsApp, controla vagas e organiza promoters.",
+        "en": "AI-agent system for party producers: answers on WhatsApp, tracks capacity and organizes promoters."
+      },
+      "detail": {
+        "es": "Las productoras de fiestas para turistas responden a mano consultas repetidas en 3 idiomas y llevan cupos y comisiones en planillas. Diseñé y construí un panel multimarca con un agente que responde con precios y cupos sacados de la base de datos (el modelo nunca inventa un precio), una bandeja con interruptor del bot y derivación a humano, y una imagen del estado de cupos generada al momento.",
+        "pt": "Produtoras de festas para turistas respondem à mão perguntas repetidas em 3 idiomas e controlam vagas e comissões em planilhas. Projetei e construí um painel multimarca com um agente que responde com preços e vagas tirados do banco de dados (o modelo nunca inventa um preço), uma caixa de entrada com interruptor do bot e transferência para humano, e uma imagem do status das vagas gerada na hora.",
+        "en": "Party producers for tourists answer repetitive questions by hand in 3 languages and track capacity and commissions in spreadsheets. I designed and built a multi-brand dashboard with an agent that replies with prices and availability pulled from the database (the model never makes up a price), an inbox with a bot on/off switch and human handoff, and an availability image generated on the fly."
+      },
+      "stats": {
+        "es": ["264 commits en ~3 semanas", "55 migraciones SQL", "101 archivos de prueba"],
+        "pt": ["264 commits em ~3 semanas", "55 migrações SQL", "101 arquivos de teste"],
+        "en": ["264 commits in ~3 weeks", "55 SQL migrations", "101 test files"]
+      },
+      "role": {
+        "es": "Solo: producto, diseño, front, back y base de datos, trabajando con un agente de código.",
+        "pt": "Sozinho: produto, design, front, back e banco de dados, trabalhando com um agente de código.",
+        "en": "Solo: product, design, front end, back end and database, working with a coding agent."
+      },
+      "year": 2026,
+      "statusKind": "demo",
+      "status": {
+        "es": "Demo funcional (prototipo con datos simulados)",
+        "pt": "Demo funcional (protótipo com dados simulados)",
+        "en": "Working demo (prototype with mock data)"
+      },
+      "privateRepo": true,
+      "tags": ["Next.js", "React", "TypeScript", "Supabase (Postgres + RLS)", "Claude API", "Vitest"],
+      "image": null,
+      "links": [
+        {
+          "label": { "es": "Demo a pedido", "pt": "Demo sob pedido", "en": "Demo on request" },
+          "href": "mailto:diegoroldan.work@gmail.com?subject=Demo%20Noctua"
+        }
+      ]
     },
     {
-      "id": "agente-sdr",
-      "title": { "es": "Agente SDR por WhatsApp", "pt": "Agente SDR no WhatsApp", "en": "WhatsApp SDR agent" },
-      "description": {
-        "es": "n8n + IA que califica y responde clientes de una marca real.",
-        "pt": "n8n + IA que qualifica e responde clientes de uma marca real.",
-        "en": "n8n + AI that qualifies and replies to customers for a real brand."
-      }
+      "id": "whatsapp-agent",
+      "file": "whatsapp-agent.n8n",
+      "title": {
+        "es": "Asistente de WhatsApp con IA",
+        "pt": "Assistente de WhatsApp com IA",
+        "en": "AI WhatsApp assistant"
+      },
+      "short": {
+        "es": "Agente de WhatsApp con dos modos: atiende clientes y es mi asistente personal.",
+        "pt": "Agente de WhatsApp com dois modos: atende clientes e é meu assistente pessoal.",
+        "en": "WhatsApp agent with two modes: it serves customers and works as my personal assistant."
+      },
+      "detail": {
+        "es": "Si escribe un número externo, responde consultas y agenda turnos. Si escribo yo, funciona como asistente personal: registra gastos en planillas, maneja la agenda y envía mails o mensajes. Solo se activa con una palabra clave, para no responderle a familiares.",
+        "pt": "Se um número externo escreve, responde dúvidas e agenda horários. Se sou eu quem escreve, funciona como assistente pessoal: registra gastos em planilhas, cuida da agenda e envia e-mails ou mensagens. Só é ativado com uma palavra-chave, para não responder a familiares.",
+        "en": "When an outside number writes, it answers questions and books appointments. When I write, it works as my personal assistant: it logs expenses in spreadsheets, manages my calendar and sends emails or messages. It only activates with a keyword, so it doesn't reply to family."
+      },
+      "role": {
+        "es": "Proyecto propio, desarrollo completo.",
+        "pt": "Projeto próprio, desenvolvimento completo.",
+        "en": "Personal project, built end to end."
+      },
+      "year": 2026,
+      "statusKind": "live",
+      "status": {
+        "es": "En uso (uso propio)",
+        "pt": "Em uso (uso próprio)",
+        "en": "In use (personal use)"
+      },
+      "tags": ["n8n", "Evolution API", "LLM", "Google Sheets", "PostgreSQL", "VPS (Easypanel)"],
+      "image": {
+        "src": "img/project-whatsapp-agent.webp",
+        "width": 528,
+        "height": 330,
+        "alt": {
+          "es": "Flujo de n8n del asistente de WhatsApp",
+          "pt": "Fluxo do n8n do assistente de WhatsApp",
+          "en": "n8n workflow of the WhatsApp assistant"
+        }
+      },
+      "links": [
+        {
+          "label": { "es": "Ver video demo", "pt": "Ver vídeo demo", "en": "Watch demo video" },
+          "href": "https://youtu.be/uZkAoK3j5yA",
+          "external": true
+        }
+      ]
     },
     {
       "id": "cachorro-na-lente",
-      "title": { "es": "Cachorro na lente", "pt": "Cachorro na lente", "en": "Cachorro na lente" },
-      "description": {
-        "es": "Portfolio de fotografía con SEO local.",
-        "pt": "Portfólio de fotografia com SEO local.",
-        "en": "Photography portfolio with local SEO."
-      }
+      "file": "cachorro-na-lente.site",
+      "title": "Cachorro na lente",
+      "short": {
+        "es": "Portfolio de fotografía con SEO local para Rio de Janeiro y Buenos Aires.",
+        "pt": "Portfólio de fotografia com SEO local para o Rio de Janeiro e Buenos Aires.",
+        "en": "Photography portfolio with local SEO for Rio de Janeiro and Buenos Aires."
+      },
+      "detail": {
+        "es": "Sitio para mi trabajo de fotografía (deportes, gastronomía, inmobiliaria): estética oscura y cinematográfica, bilingüe PT/ES, consultas por WhatsApp.",
+        "pt": "Site para o meu trabalho de fotografia (esportes, gastronomia, imóveis): estética escura e cinematográfica, bilíngue PT/ES, contatos pelo WhatsApp.",
+        "en": "Site for my photography work (sports, food, real estate): dark, cinematic look, bilingual PT/ES, inquiries via WhatsApp."
+      },
+      "role": {
+        "es": "Proyecto propio.",
+        "pt": "Projeto próprio.",
+        "en": "Personal project."
+      },
+      "year": 2026,
+      "statusKind": "live",
+      "status": { "es": "Publicado", "pt": "Publicado", "en": "Live" },
+      "tags": ["HTML", "CSS", "JavaScript", "Netlify"],
+      "image": null,
+      "links": [
+        {
+          "label": { "es": "Ver sitio", "pt": "Ver site", "en": "Visit site" },
+          "href": "",
+          "external": true
+        }
+      ]
     }
   ]
 }

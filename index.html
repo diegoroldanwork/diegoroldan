@@ -24,10 +24,12 @@
       <a class="brand" href="#main"><span class="brand__path">~/</span>diego-roldan</a>
 
       <nav class="nav" data-i18n-attr="aria-label:a11y.nav" aria-label="Navegación principal">
-        <ul class="nav__links">
-          <li><a href="#chat" data-ask="about" data-i18n="nav.about">Sobre mí</a></li>
-          <li><a href="#chat" data-ask="projects" data-i18n="nav.projects">Proyectos</a></li>
-          <li><a href="#chat" data-ask="stack" data-i18n="nav.stack">Stack</a></li>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+          <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+          <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+          <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
+          <li><a href="#freelance" data-i18n="nav.services">Freelance</a></li>
           <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
         </ul>
 
@@ -36,6 +38,10 @@
           <button type="button" data-lang="pt" aria-pressed="false" lang="pt-BR">PT</button>
           <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
         </div>
+
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-i18n-attr="aria-label:a11y.menu" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
       </nav>
     </div>
   </header>
@@ -86,15 +92,34 @@
       </div>
     </section>
 
-    <!-- developer.js -->
-    <section class="section section--tight">
-      <div class="container narrow">
-        <div class="window window--code">
-          <div class="window__bar">
-            <span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="window__title">developer.js</span>
-          </div>
-          <div class="window__body">
+    <!-- Proyectos (se completa desde data/projects.json) -->
+    <section class="section" id="proyectos">
+      <div class="ambient ambient--projects" aria-hidden="true"><span></span><span></span></div>
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker" data-i18n="projects.kicker">Proyectos</p>
+          <h2 class="section-title" data-i18n="projects.title">Lo que <em class="kw">construí</em></h2>
+        </header>
+        <div class="projects" id="projects-list"></div>
+      </div>
+    </section>
+
+    <!-- Stack + developer.js -->
+    <section class="section" id="stack">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker" data-i18n="stack.kicker">Stack</p>
+          <h2 class="section-title" data-i18n="stack.title">Con qué <em class="kw">trabajo</em></h2>
+        </header>
+        <div class="stack-layout">
+          <div id="stack-list"></div>
+
+          <div class="window window--code">
+            <div class="window__bar">
+              <span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="window__title">developer.js</span>
+            </div>
+            <div class="window__body">
 <pre><code><span class="tok-kw">const</span> <span class="tok-var">developer</span> <span class="tok-punc">=</span> <span class="tok-punc">{</span>
   <span class="tok-key">name</span><span class="tok-punc">:</span> <span class="tok-str">"Diego Nicolás Roldán"</span><span class="tok-punc">,</span>
   <span class="tok-key">role</span><span class="tok-punc">:</span> <span class="tok-str">"<span data-i18n="code.role">Desarrollador full stack jr.</span>"</span><span class="tok-punc">,</span>
@@ -103,11 +128,88 @@
     <span class="tok-str">"<span data-i18n="code.focus2">Automatización</span>"</span><span class="tok-punc">,</span>
     <span class="tok-str">"<span data-i18n="code.focus3">Agentes IA</span>"</span>
   <span class="tok-punc">],</span>
-  <span class="tok-key">stack</span><span class="tok-punc">: [</span><span class="tok-str">"HTML"</span><span class="tok-punc">,</span> <span class="tok-str">"CSS"</span><span class="tok-punc">,</span> <span class="tok-str">"JavaScript"</span><span class="tok-punc">,</span> <span class="tok-str">"n8n"</span><span class="tok-punc">,</span> <span class="tok-str">"LLMs"</span><span class="tok-punc">],</span>
+  <span class="tok-key">stack</span><span class="tok-punc">: [</span>
+    <span class="tok-str">"TypeScript"</span><span class="tok-punc">,</span> <span class="tok-str">"React"</span><span class="tok-punc">,</span> <span class="tok-str">"Next.js"</span><span class="tok-punc">,</span>
+    <span class="tok-str">"Supabase"</span><span class="tok-punc">,</span> <span class="tok-str">"n8n"</span><span class="tok-punc">,</span> <span class="tok-str">"Claude API"</span>
+  <span class="tok-punc">],</span>
+  <span class="tok-com">// <span data-i18n="code.learning">en profundidad · DevClub Full Stack Pro</span></span>
+  <span class="tok-key">learning</span><span class="tok-punc">: [</span><span class="tok-str">"React"</span><span class="tok-punc">,</span> <span class="tok-str">"Next.js"</span><span class="tok-punc">,</span> <span class="tok-str">"TypeScript"</span><span class="tok-punc">],</span>
   <span class="tok-key">status</span><span class="tok-punc">:</span> <span class="tok-str">"<span data-i18n="code.status">disponible · remoto · full time</span>"</span>
 <span class="tok-punc">};</span><span class="cursor" aria-hidden="true"></span></code></pre>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="section" id="sobre-mi">
+      <div class="ambient ambient--about" aria-hidden="true"><span></span></div>
+      <div class="container about">
+        <div class="about__text">
+          <header class="section-head">
+            <p class="kicker" data-i18n="about.kicker">Sobre mí</p>
+            <h2 class="section-title" data-i18n="about.title">De la noche al <em class="kw">código</em></h2>
+          </header>
+          <p data-i18n="about.p1">Trabajé más de 15 años en gastronomía y en la noche: bartender y después productor de fiestas en Rio de Janeiro. Ahí aprendí a resolver problemas bajo presión y a atender bien a la gente.</p>
+          <p data-i18n="about.p2">Buscando un trabajo que pudiera hacer desde casa descubrí la programación, y hoy construyo sitios, automatizaciones y agentes de IA.</p>
+          <p data-i18n="about.p3">Noctua nació de esa experiencia: vi la noche por dentro y construí la herramienta que faltaba.</p>
+        </div>
+        <dl class="panel facts">
+          <div>
+            <dt data-i18n="about.languagesLabel">Idiomas</dt>
+            <dd data-i18n="about.languages">Español nativo · portugués fluido · inglés básico (en aprendizaje)</dd>
+          </div>
+          <div>
+            <dt data-i18n="about.lookingLabel">Busco</dt>
+            <dd data-i18n="about.looking">Trabajo remoto full time (fijo o freelance)</dd>
+          </div>
+          <div>
+            <dt data-i18n="about.locationLabel">Ubicación</dt>
+            <dd data-i18n="about.location">Brasil · Argentina — remoto (UTC-3)</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Formación (se completa desde data/education.json) -->
+    <section class="section" id="formacion">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker" data-i18n="education.kicker">Formación</p>
+          <h2 class="section-title" data-i18n="education.title">Formación y <em class="kw">certificados</em></h2>
+        </header>
+        <ul class="courses" id="courses"></ul>
+        <ul class="certs" id="certs"></ul>
+      </div>
+    </section>
+
+    <!-- Freelance -->
+    <section class="section" id="freelance">
+      <div class="ambient ambient--services" aria-hidden="true"><span></span></div>
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker" data-i18n="services.kicker">Freelance</p>
+          <h2 class="section-title" data-i18n="services.title">También tomo proyectos <em class="kw">freelance</em></h2>
+          <p class="lead" data-i18n="services.lead">Si tenés un negocio, puedo ayudarte con esto:</p>
+        </header>
+        <ul class="services">
+          <li class="panel service">
+            <h3 data-i18n="services.items.landing.title">Landing pages</h3>
+            <p data-i18n="services.items.landing.desc">Sitios de una página, rápidos y claros, pensados para convertir visitas en consultas.</p>
+            <a class="btn btn--sm" href="https://wa.me/5548999733214?text=Hola%20Diego%2C%20quiero%20consultar%20por%20una%20landing%20page" target="_blank" rel="noopener" data-i18n-attr="href:services.items.landing.wa"><span data-i18n="services.cta">Consultar</span> <span class="sr-only" data-i18n="a11y.newTab">(se abre en una pestaña nueva)</span></a>
+          </li>
+          <li class="panel service">
+            <h3 data-i18n="services.items.automation.title">Automatizaciones con n8n</h3>
+            <p data-i18n="services.items.automation.desc">Conecto tus herramientas para que las tareas repetitivas se hagan solas: planillas, mails, agendas y CRMs.</p>
+            <a class="btn btn--sm" href="https://wa.me/5548999733214?text=Hola%20Diego%2C%20quiero%20consultar%20por%20una%20automatizaci%C3%B3n%20con%20n8n" target="_blank" rel="noopener" data-i18n-attr="href:services.items.automation.wa"><span data-i18n="services.cta">Consultar</span> <span class="sr-only" data-i18n="a11y.newTab">(se abre en una pestaña nueva)</span></a>
+          </li>
+          <li class="panel service">
+            <h3 data-i18n="services.items.agents.title">Agentes de IA para WhatsApp</h3>
+            <p data-i18n="services.items.agents.desc">Un asistente que responde consultas, agenda turnos y deriva a una persona cuando hace falta.</p>
+            <a class="btn btn--sm" href="https://wa.me/5548999733214?text=Hola%20Diego%2C%20quiero%20consultar%20por%20un%20agente%20de%20IA%20para%20WhatsApp" target="_blank" rel="noopener" data-i18n-attr="href:services.items.agents.wa"><span data-i18n="services.cta">Consultar</span> <span class="sr-only" data-i18n="a11y.newTab">(se abre en una pestaña nueva)</span></a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -141,5 +243,14 @@
       © <span id="year">2026</span> Diego Nicolás Roldán · <span data-i18n="footer.rights">Hecho a mano, sin frameworks.</span>
     </div>
   </footer>
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox__close" type="button" data-close data-i18n-attr="aria-label:a11y.close" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+  </dialog>
 </body>
 </html>

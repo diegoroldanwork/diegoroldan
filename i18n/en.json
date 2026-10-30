@@ -13,13 +13,19 @@
     "send": "Send",
     "typing": "Claudia is typing",
     "photo": "Photo of Diego Nicolás Roldán",
-    "newTab": "(opens in a new tab)"
+    "newTab": "(opens in a new tab)",
+    "menu": "Open menu",
+    "close": "Close",
+    "certPrefix": "Certificate",
+    "viewCert": "View certificate"
   },
   "nav": {
     "about": "About",
     "projects": "Projects",
     "stack": "Stack",
-    "contact": "Contact"
+    "contact": "Contact",
+    "education": "Education",
+    "services": "Freelance"
   },
   "hero": {
     "kicker": "Full stack · Automation · AI",
@@ -40,26 +46,23 @@
     "answers": {
       "about": {
         "q": "Tell me about yourself",
-        "text": "I'm **Diego Nicolás Roldán**, from Argentina, living in Rio de Janeiro. I come from hospitality and customer service, and today I build websites, automations and AI agents. I speak Spanish and Portuguese. I'm looking for a remote, full-time role."
+        "text": "I'm **Diego Nicolás Roldán**, from Argentina. I spent more than 15 years in hospitality and nightlife, and today I build websites, automations and AI agents. I work remotely from Brazil and Argentina (UTC-3). I speak Spanish (native), Portuguese (fluent) and basic English. I'm looking for remote full-time work, permanent or freelance.",
+        "more": "About me"
       },
       "projects": {
         "q": "What projects have you built?",
-        "text": "A few:"
+        "text": "These are the main ones:",
+        "more": "See projects"
       },
       "stack": {
         "q": "What technologies do you work with?",
         "text": "My stack today:",
-        "tags": ["HTML", "CSS", "JavaScript", "n8n", "APIs", "Webhooks", "LLMs", "Git"]
+        "more": "See stack"
       },
       "certs": {
         "q": "What certifications do you have?",
-        "text": "The most recent:",
-        "cards": [
-          { "title": "N8N · IA Club", "desc": "AI automations · grade 10 · 08/2026" },
-          { "title": "Engenharia de Prompt", "desc": "IA Club · grade 10 · 07/2026" },
-          { "title": "Missão Programação do Zero", "desc": "HTML, CSS and JavaScript · grade 10" }
-        ],
-        "tags": ["HTML", "CSS", "Git & GitHub", "JavaScript do Zero · Trybe"]
+        "text": "I'm currently taking **Programador Full Stack Pro** at DevClub. Some certificates:",
+        "more": "See education"
       },
       "contact": {
         "q": "How can I reach you?",
@@ -72,7 +75,8 @@
     "focus1": "Web development",
     "focus2": "Automation",
     "focus3": "AI agents",
-    "status": "available · remote · full time"
+    "status": "available · remote · full time",
+    "learning": "in depth · DevClub Full Stack Pro"
   },
   "outro": {
     "wave": "Hi!",
@@ -82,5 +86,57 @@
   },
   "footer": {
     "rights": "Handmade, no frameworks."
+  },
+  "projects": {
+    "kicker": "Projects",
+    "title": "What I've *built*",
+    "role": "Role",
+    "privateRepo": "Private repository"
+  },
+  "stack": {
+    "kicker": "Stack",
+    "title": "What I *work* with"
+  },
+  "about": {
+    "kicker": "About",
+    "title": "From nightlife to *code*",
+    "p1": "I spent more than 15 years in hospitality and nightlife: bartender, then party producer in Rio de Janeiro. That's where I learned to solve problems under pressure and to take good care of people.",
+    "p2": "Looking for work I could do from home, I discovered programming, and today I build websites, automations and AI agents.",
+    "p3": "Noctua was born from that experience: I saw nightlife from the inside and built the tool that was missing.",
+    "languagesLabel": "Languages",
+    "languages": "Spanish (native) · Portuguese (fluent) · English (basic, learning)",
+    "lookingLabel": "Looking for",
+    "looking": "Remote full-time work (permanent or freelance)",
+    "locationLabel": "Location",
+    "location": "Brazil · Argentina — remote (UTC-3)"
+  },
+  "education": {
+    "kicker": "Education",
+    "title": "Education & *certificates*",
+    "grade": "grade",
+    "hours": "h"
+  },
+  "services": {
+    "kicker": "Freelance",
+    "title": "I also take *freelance* projects",
+    "lead": "If you run a business, I can help with:",
+    "cta": "Ask on WhatsApp",
+    "items": {
+      "landing": {
+        "title": "Landing pages",
+        "desc": "Fast, clear one-page sites built to turn visits into inquiries.",
+        "wa": "https://wa.me/5548999733214?text=Hi%20Diego%2C%20I'd%20like%20to%20ask%20about%20a%20landing%20page"
+      },
+      "automation": {
+        "title": "n8n automations",
+        "desc": "I connect your tools so repetitive tasks run on their own: spreadsheets, email, calendars and CRMs.",
+        "wa": "https://wa.me/5548999733214?text=Hi%20Diego%2C%20I'd%20like%20to%20ask%20about%20an%20n8n%20automation"
+      },
+      "agents": {
+        "title": "AI agents for WhatsApp",
+        "desc": "An assistant that answers questions, books appointments and hands off to a person when needed.",
+        "wa": "https://wa.me/5548999733214?text=Hi%20Diego%2C%20I'd%20like%20to%20ask%20about%20an%20AI%20agent%20for%20WhatsApp"
+      }
+    }
   }
 }

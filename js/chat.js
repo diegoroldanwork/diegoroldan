@@ -1,12 +1,14 @@
 /* ==========================================================================
-   Chat con Claudia: preguntas rápidas con respuestas fijas (i18n) y texto
-   libre que, por ahora, responde con un aviso de "próximamente".
+   Chat con Claudia: preguntas rápidas con respuestas fijas (i18n + data/) y
+   texto libre que, por ahora, responde con un aviso de "próximamente".
 
    El historial se guarda como claves, no como texto: al cambiar de idioma
    se vuelve a dibujar entero en el idioma nuevo.
    ========================================================================== */
 
-import { t, tr, getLang } from './i18n.js';
+import { t, tr } from './i18n.js';
+import { loadData, pick, el } from './data.js';
+import { stackGroups, certMeta } from './sections.js';
 
 const CONTACT = [
   { label: 'Email', href: 'mailto:diegoroldan.work@gmail.com' },
@@ -15,19 +17,15 @@ const CONTACT = [
   { label: 'WhatsApp', href: 'https://wa.me/5548999733214', external: true },
 ];
 
+// Sección a la que lleva el link "Ver…" de cada respuesta
+const SECTION = { about: 'sobre-mi', projects: 'proyectos', stack: 'stack', certs: 'formacion' };
+
 const TYPING_MS = 650;
 
 const history = [{ from: 'bot', kind: 'greeting' }];
-let projects = [];
+let data = { projects: [], groups: [], certs: [] };
 let pending = null;
 let els = {};
-
-function el(tag, className, text) {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text != null) node.textContent = text;
-  return node;
-}
 
 // "Soy **Diego**" → Soy <strong>Diego</strong>
 function rich(text) {
@@ -48,15 +46,9 @@ function cards(items) {
   return list;
 }
 
-function tags(items) {
-  const list = el('ul', 'tags');
-  items.forEach((tag) => list.append(el('li', null, tag)));
-  return list;
-}
-
-function contactLinks() {
+function linkRow(links) {
   const row = el('div', 'chat__links');
-  CONTACT.forEach(({ label, href, external }) => {
+  links.forEach(({ label, href, external }) => {
     const a = el('a', 'btn btn--sm', label);
     a.href = href;
     if (external) {
@@ -70,22 +62,25 @@ function contactLinks() {
 }
 
 function answer(id) {
-  const data = tr(`chat.answers.${id}`) || {};
-  const parts = [rich(data.text || '')];
-  if (id === 'projects' && projects.length) {
-    const lang = getLang();
-    parts.push(cards(projects.map((p) => ({ title: p.title[lang], desc: p.description[lang] }))));
+  const parts = [rich(t(`chat.answers.${id}.text`))];
+
+  if (id === 'projects') {
+    parts.push(cards(data.projects.map((p) => ({ title: pick(p.title), desc: pick(p.short) }))));
+  } else if (id === 'stack') {
+    parts.push(stackGroups(data.groups, 'chat-stack'));
+  } else if (id === 'certs') {
+    parts.push(cards(data.certs.filter((c) => c.featured).map((c) => ({ title: c.name, desc: certMeta(c) }))));
   }
-  if (data.cards) parts.push(cards(data.cards));
-  if (data.tags) parts.push(tags(data.tags));
-  if (id === 'contact') parts.push(contactLinks());
+
+  if (id === 'contact') parts.push(linkRow(CONTACT));
+  else if (SECTION[id]) parts.push(linkRow([{ label: t(`chat.answers.${id}.more`), href: `#${SECTION[id]}` }]));
   return parts;
 }
 
 function bubble(msg) {
   const node = el('div', `chat__msg chat__msg--${msg.from}`);
   if (msg.from === 'user') {
-    node.textContent = msg.text ?? tr(`chat.answers.${msg.id}.q`);
+    node.textContent = msg.text ?? t(`chat.answers.${msg.id}.q`);
   } else if (msg.kind === 'greeting') {
     node.append(rich(t('chat.greeting')));
   } else if (msg.kind === 'soon') {
@@ -156,15 +151,6 @@ function onSubmit(e) {
   reply({ from: 'bot', kind: 'soon' });
 }
 
-async function loadProjects() {
-  try {
-    const res = await fetch('data/projects.json');
-    if (res.ok) projects = (await res.json()).projects || [];
-  } catch (err) {
-    console.error(err);
-  }
-}
-
 export async function initChat() {
   const root = document.getElementById('chat');
   if (!root) return;
@@ -175,20 +161,14 @@ export async function initChat() {
     input: root.querySelector('.chat__input'),
   };
 
-  // Chips del chat y links de la navegación con data-ask
-  document.addEventListener('click', (e) => {
-    const trigger = e.target.closest('[data-ask]');
-    if (!trigger) return;
-    e.preventDefault();
-    if (!root.contains(trigger)) {
-      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      root.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
-    }
-    ask(trigger.dataset.ask);
+  els.chips.addEventListener('click', (e) => {
+    const chip = e.target.closest('[data-ask]');
+    if (chip) ask(chip.dataset.ask);
   });
   els.form.addEventListener('submit', onSubmit);
   document.addEventListener('i18n:change', render);
 
-  await loadProjects();
+  const [projects, stack, education] = await Promise.all([loadData('projects'), loadData('stack'), loadData('education')]);
+  data = { projects: projects.projects || [], groups: stack.groups || [], certs: education.certs || [] };
   render();
 }
